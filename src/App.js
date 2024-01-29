@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import Layout from './Layout'
+import Sort from './Sort'
+import Comments from './Comments'
+import Product from './Product'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    return (
+        <>
+            <Product />
+            <Comments />
+            <Sort />
+
+            {/* 부모 컴포넌트 */}
+            <Cat name="가을" age="2" />
+            {/* {name: '가을', age: 2} 객체가 Cat 컴포넌트로 전달된다. */}
+            <Cat name="겨울" age="3" />
+            <Cat name="봄" age="4" />
+
+            <Layout />
+        </>
+    )
 }
 
-export default App;
+// 자식 컴포넌트
+const Cat = ({ name, age }) => {
+    // const props = {name: '가을', age: 2}
+    // const { name, age } = props;
+    return (
+        <>
+            <div>
+                {name}이는 {age}살입니다.
+            </div>
+        </>
+    )
+}
+
+// export default App;
