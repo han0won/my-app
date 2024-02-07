@@ -2,13 +2,29 @@ import Layout from './Layout'
 import Sort from './Sort'
 import Comments from './Comments'
 import Product from './Product'
+import Event from './Event'
+import State from './State'
+import SetNumber from './SetNumber'
+import Sort2 from './Sort2'
 
 export default function App() {
+
     return (
         <>
+            <Sort2 />
+            <hr />
+            <SetNumber />
+            <hr />
+            <State />
+            <hr />
+            <Event />
+            <hr />
             <Product />
+            <hr />
             <Comments />
+            <hr />
             <Sort />
+
 
             {/* 부모 컴포넌트 */}
             <Cat name="가을" age="2" />
